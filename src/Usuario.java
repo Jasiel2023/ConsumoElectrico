@@ -34,15 +34,4 @@ public class Usuario {
     }
 
     ArrayList<Informe> informeList;
-
-
-    @Override
-    public String toString() {
-        return "Usuario [apellido=" + apellido + ", cedula=" + cedula + ", direccion=" + direccion + ", nombre="
-                + nombre + ", informeList=" + informeList + "]";
-    }
-
-
-
-    
 }
