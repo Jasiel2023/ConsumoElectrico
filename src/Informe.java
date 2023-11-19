@@ -7,6 +7,13 @@ public class Informe {
     private String infoUsuario;
     private String resultadosAlmacenados;
 
+
+    public Informe(Usuario usuario) {
+        this.fechaAnalisis = new Date();
+        this.infoUsuario = usuario.nombre + " " + usuario.apellido + " " + usuario.cedula;
+
+    }
+
     public float getCantidadConsumo() {
         return cantidadConsumo;
     }
@@ -15,33 +22,17 @@ public class Informe {
         this.fechaAnalisis = new Date();
     }
 
-    public void setInfoUsuario(String infoUsuario) {
-        this.infoUsuario = usuario.nombre + " " + usuario.apellido + " " + usuario.cedula;
-    }
-
-
-    
-
-
-    @Override
-    public String toString() {
-        return "Informe [cantidadConsumo=" + cantidadConsumo + ", fechaAnalisis=" + fechaAnalisis + ", infoUsuario="
-                + infoUsuario + ", resultadosAlmacenados=" + resultadosAlmacenados + "]";
-    }
-
-
 
     public void generarInforme(){
         System.out.println("Generando informe..."
                 + "\nCantidad de consumo: " + cantidadConsumo
                 + "\nFecha de análisis: " + fechaAnalisis
-                + "\nInformación del usuario: " + infoUsuario
-                + "\nResultados almacenados: " + resultadosAlmacenados);
+                + "\nInformación del usuario: " + infoUsuario + "\n");
                 if ((MedidorDeConsumo.analizarDatos() == true)){
                     System.out.println("Alerta de consumo excesivo");
                 }
     }
 
-    Usuario usuario = new Usuario("Cajas", "0705765628", "Av. 6 de Diciembre", "Richar");
+    Usuario usuario;
     MedidorDeConsumo medidorDeConsumo;
 }
