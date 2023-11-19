@@ -1,4 +1,3 @@
-import javax.xml.crypto.Data;
 import java.util.Date;
 
 public class Informe {
@@ -18,13 +17,8 @@ public class Informe {
         return cantidadConsumo;
     }
 
-    public void setFechaAnalisis(Date fechaAnalisis) {
-        this.fechaAnalisis = new Date();
-    }
-
-
     public void generarInforme(){
-        System.out.println("Generando informe..."
+        System.out.println("----Generando informe----"
                 + "\nCantidad de consumo: " + cantidadConsumo
                 + "\nFecha de análisis: " + fechaAnalisis
                 + "\nInformación del usuario: " + infoUsuario + "\n");
