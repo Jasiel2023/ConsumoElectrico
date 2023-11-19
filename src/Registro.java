@@ -1,4 +1,4 @@
-public class Rgistro {
+public class Registro {
     public void registrarDispositivos(){
 
 
@@ -8,4 +8,5 @@ public class Rgistro {
 
     }
 
+    MedidorDeConsumo medidorDeConsumo;
 }
