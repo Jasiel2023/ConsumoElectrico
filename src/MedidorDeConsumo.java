@@ -3,7 +3,14 @@ import java.util.ArrayList;
 public class MedidorDeConsumo {
     private static float consumoTotal;
 
-    
+    public MedidorDeConsumo(){
+
+    }
+
+    public static float getConsumoTotal() {
+        return consumoTotal;
+    }
+
     public static boolean analizarDatos(){
         if (MedidorDeConsumo.consumoTotal>400) {
             return true;

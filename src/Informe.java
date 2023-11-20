@@ -1,25 +1,23 @@
 import java.util.Date;
 
 public class Informe {
-    private float cantidadConsumo = 0;
     private Date fechaAnalisis;
     private String infoUsuario;
     private String resultadosAlmacenados;
 
-
-    public Informe(Usuario usuario) {
+    Usuario usuario;
+    MedidorDeConsumo medidorDeConsumo;
+    public Informe(Usuario usuario, MedidorDeConsumo medidorDeConsumo) {
         this.fechaAnalisis = new Date();
         this.infoUsuario = usuario.nombre + " " + usuario.apellido + " " + usuario.cedula;
 
     }
 
-    public float getCantidadConsumo() {
-        return cantidadConsumo;
-    }
+
 
     public void generarInforme(){
         System.out.println("----Generando informe----"
-                + "\nCantidad de consumo: " + cantidadConsumo
+                + "\nCantidad de consumo: " + medidorDeConsumo.getConsumoTotal()
                 + "\nFecha de análisis: " + fechaAnalisis
                 + "\nInformación del usuario: " + infoUsuario + "\n");
                 if ((MedidorDeConsumo.analizarDatos() == true)){
@@ -27,6 +25,5 @@ public class Informe {
                 }
     }
 
-    Usuario usuario;
-    MedidorDeConsumo medidorDeConsumo;
+
 }
