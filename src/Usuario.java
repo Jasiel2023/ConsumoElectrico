@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public class Usuario {
-    public String apellido;
+    protected String apellido;
     protected String cedula;
     protected String direccion;
-    public String nombre;
+    protected String nombre;
 
 
     public Usuario(String apellido, String cedula, String direccion, String nombre) {
