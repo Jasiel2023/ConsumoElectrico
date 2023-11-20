@@ -13,8 +13,6 @@ public class Informe {
 
     }
 
-
-
     public void generarInforme(){
         System.out.println("----Generando informe----"
                 + "\nCantidad de consumo: " + medidorDeConsumo.getConsumoTotal()
@@ -24,6 +22,4 @@ public class Informe {
                     System.out.println("Alerta de consumo excesivo");
                 }
     }
-
-
 }
