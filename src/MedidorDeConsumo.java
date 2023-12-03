@@ -2,11 +2,7 @@ import java.util.ArrayList;
 
 public class MedidorDeConsumo {
     private static float consumoTotal;
-
-    public MedidorDeConsumo(){
-
-    }
-
+    Registro registro;
     public static float getConsumoTotal() {
         return consumoTotal;
     }
@@ -19,7 +15,6 @@ public class MedidorDeConsumo {
         }
     }
 
-
     public float consumoIndividual(){
         return 0;
     }
@@ -27,6 +22,4 @@ public class MedidorDeConsumo {
     public void CalcularConsumoTotal(){
         this.consumoTotal = 0;
     }
-
-    ArrayList<Registro> registroList;
 }

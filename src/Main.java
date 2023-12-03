@@ -3,8 +3,5 @@
 public class Main {
     public static void main(String[] args) {
         Usuario usuario1 = new Usuario("Cajas", "0705765628", "Av. 6 de Diciembre", "Richard");
-        MedidorDeConsumo medidor = new MedidorDeConsumo();
-        Informe informe1 = new Informe(usuario1, medidor);
-        informe1.generarInforme();
     }
 }
